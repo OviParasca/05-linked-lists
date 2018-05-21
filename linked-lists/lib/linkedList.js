@@ -80,6 +80,20 @@ class LinkedList {
     return this;
   }
 
+
+  serialize() {
+    var serialized = JSON.stringify(this);
+ 
+    return serialized;
+  }
+ 
+
+  deserialize() {
+    var deserialized = JSON.parse(JSON.stringify(this));
+ 
+    return deserialized;
+  }
+
 }
 
 module.exports = LinkedList;

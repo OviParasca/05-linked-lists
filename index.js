@@ -1,6 +1,6 @@
 'use strict';
 
-const linkedList = require('./lib/linkedList.js');
+const linkedList = require('./linked-lists/lib/linkedList.js');
 
 let ll = new linkedList();
 
@@ -10,15 +10,12 @@ ll.append("3rd node");
 ll.append("4th node");
 ll.append("5th node");
 
-
-// console.log(ll.length);
-// console.log(ll.prepend("lalala"));
-// ll.remove(4);
-// console.log(ll.length);
-
 ll.reverse();
 console.log(`new head node: ${ll.head.value}`);
 console.log(ll.head.next.value);
 console.log(ll.head.next.next.value);
 console.log(ll.head.next.next.next.value);
 console.log(ll.head.next.next.next.next.value);
+
+console.log(ll.serialize());
+console.log(ll.deserialize());

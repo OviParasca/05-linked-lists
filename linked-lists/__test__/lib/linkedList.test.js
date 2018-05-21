@@ -16,7 +16,7 @@ describe('Linked List', () => {
     list.append(initialValue);
     expect(list.head.value).toEqual(initialValue);
 
-    let newValue = 'Soemthing Else';
+    let newValue = 'Something Else';
     list.append(newValue);
     expect(list.head.next.value).toEqual(newValue);
 
@@ -78,4 +78,18 @@ describe('Linked List', () => {
     list.reverse();
     expect(list.head.next.value).toEqual('2nd One');
   });
+
+  it('testing the serialization and deserialization', () => {
+    let list = new LL();
+    list.append('First One');
+
+    // serialize
+    list.serialize();
+    expect(list).toEqual({"head":{"value":"First One","next":null},"length":1});
+
+    // deserialize
+    list.deserialize();
+    expect(list).toEqual({ head: { value: 'First One', next: null }, length: 1 });
+  });
+
 });
