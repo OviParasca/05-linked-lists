@@ -1,0 +1,20 @@
+{
+  "name": "05-linked-lists",
+  "version": "1.0.0",
+  "description": "code fellows 401d24",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ./__test__/lib/node.test.js --verbose --coverage jest ./__test__/lib/linkedList.test.js --verbose --coverage",
+    "lint": "eslint **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OviParasca/05-linked-lists.git"
+  },
+  "author": "Ovi Parasca & Jason Burns",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^22.4.3",
+    "eslint": "^4.19.1"
+  }
+}

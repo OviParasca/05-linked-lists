@@ -4,7 +4,7 @@ const Node = require('../../lib/node.js');
 
 describe('Node Module', () => {
 
-  it('constructor()', () => {
+  it('constructor() of the Node.js', () => {
     let value = 'Some Value';
     let node = new Node(value);
     expect(node.value).toEqual(value);

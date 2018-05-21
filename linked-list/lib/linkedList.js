@@ -9,6 +9,7 @@ class LinkedList {
     this.length = 0;
   }
 
+  
   append(value) {
     let node = new Node(value);
 
@@ -22,6 +23,7 @@ class LinkedList {
 
     // If we have already have a head node, add new new node to end of linked list
     let currentNode = this.head;
+    // Big O = O(n)
     while (currentNode.next) {
       currentNode = currentNode.next;
     }
@@ -32,6 +34,7 @@ class LinkedList {
     return this;
   }
 
+  // Big O = O(1)
   prepend(value) {
     const newNode = new Node(value);
     newNode.next = this.head; 
@@ -45,6 +48,7 @@ class LinkedList {
     let currentNode = this.head;
     let prevNode = currentNode;
 
+    // Big O = O(n)
     for (var i = 0; i < this.length; i++) {
       if (offset == i) {
         let tempNode = currentNode.next;
@@ -64,6 +68,7 @@ class LinkedList {
     var currentNode = this.head;
     var next, prev = null;
     
+    // Big O = O(n)
     while(currentNode) {
       next = currentNode.next; 
       currentNode.next = prev; 
